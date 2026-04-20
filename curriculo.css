@@ -336,6 +336,23 @@ section {
   margin-left: 0.35rem;
 }
 
+/**
+ * Bloco "projects.toml": a timeline reutiliza .timeline em um <ul>.
+ * Sem isso, cada <li> ganha marcador nativo (disc) além do ::before customizado.
+ */
+ul.timeline {
+  list-style: none;
+  margin: 0;
+}
+
+ul.timeline > li.timeline-item {
+  list-style: none;
+}
+
+ul.timeline > li.timeline-item::marker {
+  content: none;
+}
+
 .timeline-item {
   position: relative;
   padding-bottom: 1.75rem;
