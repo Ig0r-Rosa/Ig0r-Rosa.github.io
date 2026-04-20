@@ -337,27 +337,35 @@ section {
 }
 
 /**
- * Bloco "projects.toml": a timeline reutiliza .timeline em um <ul>.
- * Sem isso, cada <li> ganha marcador nativo (disc) além do ::before customizado.
+ * Bloco "projects.toml": mesma geometria que a timeline de "Experiência"
+ * (padding-left + borda). Sem isso, left: calc(-1.25rem - 5px) do ::before
+ * não coincide com a linha e o nó fica “cortado” ou deslocado.
  */
 ul.timeline {
+  position: relative;
   list-style: none !important;
-  margin: 0 !important;
-  padding-left: 0 !important;
+  margin: 0 0 0 0.35rem !important;
+  padding-left: 1.25rem !important;
+  border-left: 2px solid var(--border) !important;
 }
 
 ul.timeline > li.timeline-item {
   list-style: none !important;
   display: block;
+  /* padding-top no <li> empurra só o texto; o ::before fica desalinhado */
+  padding-top: 0 !important;
 }
 
 ul.timeline > li.timeline-item::marker {
   content: none;
 }
 
-/* Fallback: em alguns navegadores o marcador persiste sem !important */
 ul.timeline li {
   list-style-type: none !important;
+}
+
+ul.timeline > li.timeline-item + li.timeline-item {
+  margin-top: 0.35rem;
 }
 
 .timeline-item {
