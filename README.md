@@ -21,13 +21,3 @@ Site estático no **GitHub Pages** com currículo em uma página (`index.html`),
 | `curriculo.css`, `curriculo.js` | Estilo (tema dev/IA) e animação leve do subtítulo |
 | `*.pdf` | Fontes originais usadas para compilar o conteúdo |
 | `.nojekyll` | Desativa Jekyll no GitHub Pages para servir os estáticos como estão |
-
-## Visualização local
-
-Na raiz do repositório:
-
-```bash
-python3 -m http.server 8080
-```
-
-Abra `http://127.0.0.1:8080/` no navegador.
