@@ -40,6 +40,23 @@ body {
   overflow-x: hidden;
 }
 
+/**
+ * Chuva Matrix (canvas): atrás do gradiente para não competir com o texto.
+ */
+.matrix-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matrix-canvas {
+    display: none;
+  }
+}
+
 /* Fundo em grade + ruído sutil (sensação de “terminal / mesh”) */
 .bg-mesh {
   position: fixed;
