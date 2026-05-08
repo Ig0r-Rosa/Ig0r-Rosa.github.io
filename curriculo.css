@@ -194,52 +194,6 @@ main {
   margin-bottom: 1rem;
 }
 
-/**
- * Link principal do portfólio — destaque visual para recrutadores e meta “above the fold”.
- */
-.hero-portfolio {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  max-width: 28rem;
-  margin-bottom: 1.25rem;
-  padding: 0.85rem 1rem;
-  text-decoration: none;
-  color: var(--text);
-  background: linear-gradient(135deg, rgba(0, 229, 192, 0.12), rgba(167, 139, 250, 0.08));
-  border: 1px solid var(--accent-dim);
-  border-radius: var(--radius);
-  box-shadow: 0 0 28px rgba(0, 229, 192, 0.12);
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
-}
-
-.hero-portfolio:hover,
-.hero-portfolio:focus-visible {
-  border-color: var(--accent);
-  box-shadow: 0 0 32px rgba(0, 229, 192, 0.22);
-  transform: translateY(-1px);
-}
-
-.hero-portfolio:focus-visible {
-  outline: 2px solid var(--violet);
-  outline-offset: 3px;
-}
-
-.hero-portfolio-label {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.hero-portfolio-url {
-  font-family: var(--font-mono);
-  font-size: clamp(0.8rem, 2vw, 0.95rem);
-  color: var(--text);
-  word-break: break-all;
-}
-
 .hero .lead {
   color: var(--text-muted);
   max-width: 36rem;
