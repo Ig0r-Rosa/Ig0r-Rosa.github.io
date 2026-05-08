@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Igor de Matos da Rosa — desenvolvedor back-end, automações com IA, engenharia de prompts e pesquisa em otimização fotovoltaica. UFSC, Retta TI."
+      content="Igor de Matos da Rosa — desenvolvedor back-end, automações com IA (prompts, MCP, N8N), Laravel, Python, QA. Portfólio: https://ig0r-rosa.github.io/ — UFSC, Retta TI."
     />
+    <meta property="og:title" content="Igor de Matos da Rosa | CV interativo" />
+    <meta
+      property="og:description"
+      content="Back-end, IA generativa, automação e qualidade de software. Currículo completo em https://ig0r-rosa.github.io/"
+    />
+    <meta property="og:url" content="https://ig0r-rosa.github.io/" />
+    <meta name="keywords" content="desenvolvedor back-end, Laravel, PHP, Python, IA generativa, automação, MCP, N8N, QA, Git, MySQL, MongoDB, UFSC, Retta TI" />
+    <link rel="canonical" href="https://ig0r-rosa.github.io/" />
     <title>Igor de Matos da Rosa | CV — IA, automação & back-end</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,14 +55,27 @@
         </p>
         <h1 id="nome-principal">Igor de Matos da Rosa</h1>
         <p id="typed-tagline" class="tagline" aria-live="polite"></p>
+        <a
+          class="hero-portfolio"
+          href="https://ig0r-rosa.github.io/"
+          rel="noopener noreferrer me"
+          aria-label="Portfólio e currículo interativo em ig0r-rosa.github.io"
+        >
+          <span class="hero-portfolio-label">Portfólio &amp; CV interativo</span>
+          <span class="hero-portfolio-url">https://ig0r-rosa.github.io/</span>
+        </a>
         <p class="lead">
-          Desenvolvedor de <strong>back-end</strong> e <strong>automações com IA</strong>, com experiência em
-          engenharia de prompts, MCP e entrega de software com qualidade. Graduando em Engenharia de
-          Computação (UFSC — Araranguá), com três anos de iniciação científica em otimização energética e
-          publicações em eventos IEEE e Springer.
+          Desenvolvedor <strong>back-end</strong> (Laravel, PHP, Python, APIs) e <strong>automações com IA
+            generativa</strong> — engenharia de prompts, <strong>MCP</strong>, <strong>N8N</strong> e entrega
+          com <strong>QA</strong> e <strong>Git</strong>. Na Retta TI, unimos qualidade de software e
+          aceleração de desenvolvimento com IA. Graduando em Engenharia de Computação (UFSC — Araranguá),
+          com IC em otimização e IA aplicada à energia e <strong>publicações IEEE / Springer</strong>.
         </p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="https://github.com/Ig0r-Rosa" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-primary" href="https://ig0r-rosa.github.io/" rel="noopener noreferrer me"
+            >Abrir portfólio</a
+          >
+          <a class="btn btn-ghost" href="https://github.com/Ig0r-Rosa" rel="noopener noreferrer">GitHub</a>
           <a
             class="btn btn-ghost"
             href="https://www.linkedin.com/in/igor-de-matos-da-rosa/"
@@ -360,6 +381,14 @@
             <span class="desc">Este site: currículo interativo, stack e trajetória.</span>
             <span class="lang">HTML · CSS · JS</span>
           </a>
+          <a class="repo-card" href="https://github.com/Ig0r-Rosa/Archivus" rel="noopener noreferrer">
+            <span class="name">Archivus</span>
+            <span class="desc"
+              >Biblioteca pessoal de Markdown: drive, Kanban, mensagens entre autores e páginas públicas
+              /@username — monólito Laravel server-side (sem SPA).</span
+            >
+            <span class="lang">PHP · Laravel · Blade · Tailwind · SQLite</span>
+          </a>
           <a class="repo-card" href="https://github.com/Ig0r-Rosa/PSO-DMR_RepoAI" rel="noopener noreferrer">
             <span class="name">PSO-DMR_RepoAI</span>
             <span class="desc"
@@ -401,6 +430,120 @@
             <span class="desc">Jogo em C++ com SFML — lógica e práticas de programação.</span>
             <span class="lang">C++</span>
           </a>
+        </div>
+      </section>
+
+      <!-- Detalhes do Archivus: visível ao rolar após “Repositórios”; propositalmente fora do menu do header -->
+      <section class="project-deep-dive" id="projeto-archivus" aria-labelledby="titulo-archivus">
+        <div class="section-head">
+          <h2 id="titulo-archivus">Sobre o Archivus</h2>
+          <span class="comment">// drive Markdown · Kanban · autores · público /@user</span>
+        </div>
+        <div class="panel">
+          <div class="panel-bar" aria-hidden="true">
+            <span class="dots"><span></span><span></span><span></span></span>
+            <span>~/repos/Archivus/README.pt.md</span>
+          </div>
+          <div class="panel-body archivus-detail-block">
+            <p style="margin-top: 0; color: var(--text-muted); font-size: 0.95rem">
+              O <strong>Archivus</strong> é uma aplicação para transformar um volume de notas em
+              <strong>biblioteca estruturada</strong>: cada usuário tem seu <strong>drive</strong> (pastas
+              e documentos em Markdown), um <strong>Kanban</strong> pessoal e uma <strong>inbox</strong> para
+              conversar com outros autores — com suporte a <strong>transferência de tarefas</strong> entre
+              quadros. Conteúdo marcado como público fica disponível em URLs
+              <code class="inline-code">/@username/…</code> sem que visitantes precisem de conta.
+            </p>
+            <p style="margin: 1rem 0 0; color: var(--text-muted); font-size: 0.92rem">
+              A stack é deliberadamente clássica: <strong>PHP 8.3</strong>, <strong>Laravel 13</strong>,
+              renderização <strong>server-side</strong> com <strong>Blade</strong>, estilos com
+              <strong>Tailwind 3</strong> e interações leves com <strong>Alpine 3</strong>; assets via
+              <strong>Vite 8</strong>. Em desenvolvimento o padrão é <strong>SQLite</strong>, com caminho para
+              MySQL/PostgreSQL em produção. Licença <strong>MIT</strong>.
+            </p>
+
+            <h3>Funcionalidades em foco</h3>
+            <ul>
+              <li>
+                <strong>Drive e Markdown</strong> — hierarquia de pastas e arquivos, publicação por documento ou
+                por pasta inteira; editor com CommonMark/GFM, paste de imagens, blocos HTML, realce de sintaxe e
+                pré-visualização ao vivo.
+              </li>
+              <li>
+                <strong>LaTeX e media</strong> — equações inline e em bloco com KaTeX; embeds automáticos para
+                YouTube, Vimeo, Google Drive e arquivos <code class="inline-code">.mp4</code> a partir de
+                imagens Markdown.
+              </li>
+              <li>
+                <strong>Kanban</strong> — colunas predefinidas e extras, prioridades, arrastar e soltar, texto
+                Markdown nos cartões.
+              </li>
+              <li>
+                <strong>Mensagens entre autores</strong> — conversas 1‑para‑1 com Markdown e imagens, polling em
+                “tempo quase real” e fluxo de oferta/aceitação/recusa/expiração para mover tarefas entre autores.
+              </li>
+              <li>
+                <strong>Descoberta pública</strong> — perfil e documentos em
+                <code class="inline-code">/@user</code>, pesquisa em <code class="inline-code">/pesquisar</code> e
+                <code class="inline-code">/trending</code> para encontrar autores.
+              </li>
+              <li>
+                <strong>i18n e acessibilidade de UI</strong> — locale por sessão (pt_BR / en) e tema claro/escuro
+                persistente em <code class="inline-code">localStorage</code>.
+              </li>
+              <li>
+                <strong>Ajuda em Markdown na própria app</strong> — conteúdos em
+                <code class="inline-code">resources/markdown-help/</code> servidos publicamente, por exemplo em
+                <code class="inline-code">/@demo/ajuda</code> e <code class="inline-code">/@demo/help</code>, com
+                slugs espelhados entre idiomas via <code class="inline-code">config/archivus.php</code>.
+              </li>
+            </ul>
+
+            <h3>Como experimentar (resumo)</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 0.92rem">
+              Clonar o repositório, <code class="inline-code">composer install</code> e
+              <code class="inline-code">npm install</code>, copiar <code class="inline-code">.env.example</code>,
+              gerar chave, configurar <code class="inline-code">APP_URL</code> (ex. porta 5077),
+              <code class="inline-code">APP_LOCALE</code> e SQLite, rodar migrações,
+              <code class="inline-code">npm run build</code> (ou <code class="inline-code">npm run dev</code> para
+              HMR) e <code class="inline-code">php artisan serve --port=5077</code>. Há variante
+              <strong>Docker</strong> (<code class="inline-code">docker compose up -d</code>) com Nginx na porta
+              5077. Documentação de rotas, modelos e fluxos: arquivo
+              <a
+                href="https://github.com/Ig0r-Rosa/Archivus/blob/master/ARCHIVUS.md"
+                rel="noopener noreferrer"
+                >ARCHIVUS.md</a
+              >
+              no repositório.
+            </p>
+
+            <h3>Qualidade e próximos passos</h3>
+            <p style="margin: 0; color: var(--text-muted); font-size: 0.92rem">
+              A base inclui suíte de testes com <strong>PHPUnit</strong> (centenas de casos), formatação
+              com <strong>Pint</strong> e logs de desenvolvimento com <strong>Pail</strong>. No roadmap próximo:
+              histórico de versões de documentos, comentários públicos, API REST e experiências offline.
+            </p>
+
+            <div class="hero-cta" style="margin-top: 1.25rem">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/Ig0r-Rosa/Archivus"
+                rel="noopener noreferrer"
+                >Repositório no GitHub</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Ig0r-Rosa/Archivus/blob/master/README.md"
+                rel="noopener noreferrer"
+                >README</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Ig0r-Rosa/Archivus/blob/master/ARCHIVUS.md"
+                rel="noopener noreferrer"
+                >ARCHIVUS.md (referência técnica)</a
+              >
+            </div>
+          </div>
         </div>
       </section>
 

@@ -194,6 +194,52 @@ main {
   margin-bottom: 1rem;
 }
 
+/**
+ * Link principal do portfólio — destaque visual para recrutadores e meta “above the fold”.
+ */
+.hero-portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 28rem;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(0, 229, 192, 0.12), rgba(167, 139, 250, 0.08));
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius);
+  box-shadow: 0 0 28px rgba(0, 229, 192, 0.12);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.hero-portfolio:hover,
+.hero-portfolio:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 32px rgba(0, 229, 192, 0.22);
+  transform: translateY(-1px);
+}
+
+.hero-portfolio:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 3px;
+}
+
+.hero-portfolio-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-portfolio-url {
+  font-family: var(--font-mono);
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: var(--text);
+  word-break: break-all;
+}
+
 .hero .lead {
   color: var(--text-muted);
   max-width: 36rem;
@@ -314,6 +360,59 @@ section {
 
 .panel-body {
   padding: 1.25rem 1.35rem;
+}
+
+/**
+ * Trechos em <code> no meio do parágrafo (rotas, comandos): leitura contínua com destaque técnico.
+ */
+.inline-code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.12rem 0.35rem;
+  border-radius: 4px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--violet);
+  word-break: break-word;
+}
+
+/**
+ * Projeto Archivus — secção longa sob “Repositórios” (sem link no header): listas e h3 compactos.
+ */
+.archivus-detail-block h3 {
+  font-size: 1rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.archivus-detail-block h3:first-of-type {
+  margin-top: 1.25rem;
+}
+
+.archivus-detail-block ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.15rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.archivus-detail-block li + li {
+  margin-top: 0.45rem;
+}
+
+.archivus-detail-block a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.archivus-detail-block a:hover,
+.archivus-detail-block a:focus-visible {
+  text-decoration: underline;
+}
+
+.project-deep-dive {
+  scroll-margin-top: 4rem;
 }
 
 /* Grid de duas colunas em telas largas */

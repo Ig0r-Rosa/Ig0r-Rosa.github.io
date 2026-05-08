@@ -18,6 +18,7 @@ Site estático no **GitHub Pages** com currículo em uma página (`index.html`),
 | Arquivo / pasta | Função |
 |-----------------|--------|
 | `index.html` | Página principal do currículo |
+| `CURRICULO-VAGAS.md` | Versão em texto para vagas (ATS / IA leitora): exporte para PDF ou copie para formulários |
 | `curriculo.css`, `curriculo.js` | Estilo (tema dev/IA) e animação leve do subtítulo |
 | `*.pdf` | Fontes originais usadas para compilar o conteúdo |
 | `.nojekyll` | Desativa Jekyll no GitHub Pages para servir os estáticos como estão |
