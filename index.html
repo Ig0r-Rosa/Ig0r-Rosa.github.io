@@ -15,6 +15,8 @@
     <meta property="og:url" content="https://ig0r-rosa.github.io/" />
     <meta name="keywords" content="desenvolvedor back-end, Laravel, PHP, Python, IA generativa, automação, MCP, N8N, QA, Git, MySQL, MongoDB, UFSC, Retta TI" />
     <link rel="canonical" href="https://ig0r-rosa.github.io/" />
+    <link rel="icon" href="Assets/icone.png" type="image/png" />
+    <link rel="apple-touch-icon" href="Assets/icone.png" />
     <title>Igor de Matos da Rosa | CV — IA, automação & back-end</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -433,115 +435,96 @@
         </div>
       </section>
 
-      <!-- Detalhes do Archivus: visível ao rolar após “Repositórios”; propositalmente fora do menu do header -->
+      <!-- Detalhes do Archivus: sem link dedicado no header (só Repositorios → #repos, depois rolar) -->
       <section class="project-deep-dive" id="projeto-archivus" aria-labelledby="titulo-archivus">
         <div class="section-head">
-          <h2 id="titulo-archivus">Sobre o Archivus</h2>
-          <span class="comment">// drive Markdown · Kanban · autores · público /@user</span>
+          <h2 id="titulo-archivus">Archivus</h2>
+          <span class="comment">// biblioteca Markdown · Laravel · MIT</span>
         </div>
         <div class="panel">
           <div class="panel-bar" aria-hidden="true">
             <span class="dots"><span></span><span></span><span></span></span>
-            <span>~/repos/Archivus/README.pt.md</span>
+            <span>~/repos/Archivus — spotlight</span>
           </div>
           <div class="panel-body archivus-detail-block">
-            <p style="margin-top: 0; color: var(--text-muted); font-size: 0.95rem">
-              O <strong>Archivus</strong> é uma aplicação para transformar um volume de notas em
-              <strong>biblioteca estruturada</strong>: cada usuário tem seu <strong>drive</strong> (pastas
-              e documentos em Markdown), um <strong>Kanban</strong> pessoal e uma <strong>inbox</strong> para
-              conversar com outros autores — com suporte a <strong>transferência de tarefas</strong> entre
-              quadros. Conteúdo marcado como público fica disponível em URLs
-              <code class="inline-code">/@username/…</code> sem que visitantes precisem de conta.
-            </p>
-            <p style="margin: 1rem 0 0; color: var(--text-muted); font-size: 0.92rem">
-              A stack é deliberadamente clássica: <strong>PHP 8.3</strong>, <strong>Laravel 13</strong>,
-              renderização <strong>server-side</strong> com <strong>Blade</strong>, estilos com
-              <strong>Tailwind 3</strong> e interações leves com <strong>Alpine 3</strong>; assets via
-              <strong>Vite 8</strong>. Em desenvolvimento o padrão é <strong>SQLite</strong>, com caminho para
-              MySQL/PostgreSQL em produção. Licença <strong>MIT</strong>.
-            </p>
+            <div class="archivus-spotlight">
+              <!-- Print da UI em primeiro plano (também lê-se primeiro em mobile) -->
+              <figure class="archivus-spotlight__figure">
+                <img
+                  src="Assets/ArchivusInterface.png"
+                  width="1919"
+                  height="898"
+                  alt="Captura da interface Archivus: área Meus arquivos com grade de pastas e documentos Markdown, barra superior com navegação e tema escuro."
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="archivus-spotlight__caption">
+                  Interface real do Archivus — drive de Markdown, navegação e tema escuro (captura da instância de
+                  desenvolvimento).
+                </figcaption>
+              </figure>
 
-            <h3>Funcionalidades em foco</h3>
-            <ul>
-              <li>
-                <strong>Drive e Markdown</strong> — hierarquia de pastas e arquivos, publicação por documento ou
-                por pasta inteira; editor com CommonMark/GFM, paste de imagens, blocos HTML, realce de sintaxe e
-                pré-visualização ao vivo.
-              </li>
-              <li>
-                <strong>LaTeX e media</strong> — equações inline e em bloco com KaTeX; embeds automáticos para
-                YouTube, Vimeo, Google Drive e arquivos <code class="inline-code">.mp4</code> a partir de
-                imagens Markdown.
-              </li>
-              <li>
-                <strong>Kanban</strong> — colunas predefinidas e extras, prioridades, arrastar e soltar, texto
-                Markdown nos cartões.
-              </li>
-              <li>
-                <strong>Mensagens entre autores</strong> — conversas 1‑para‑1 com Markdown e imagens, polling em
-                “tempo quase real” e fluxo de oferta/aceitação/recusa/expiração para mover tarefas entre autores.
-              </li>
-              <li>
-                <strong>Descoberta pública</strong> — perfil e documentos em
-                <code class="inline-code">/@user</code>, pesquisa em <code class="inline-code">/pesquisar</code> e
-                <code class="inline-code">/trending</code> para encontrar autores.
-              </li>
-              <li>
-                <strong>i18n e acessibilidade de UI</strong> — locale por sessão (pt_BR / en) e tema claro/escuro
-                persistente em <code class="inline-code">localStorage</code>.
-              </li>
-              <li>
-                <strong>Ajuda em Markdown na própria app</strong> — conteúdos em
-                <code class="inline-code">resources/markdown-help/</code> servidos publicamente, por exemplo em
-                <code class="inline-code">/@demo/ajuda</code> e <code class="inline-code">/@demo/help</code>, com
-                slugs espelhados entre idiomas via <code class="inline-code">config/archivus.php</code>.
-              </li>
-            </ul>
+              <div class="archivus-spotlight__text">
+                <p class="archivus-lead">
+                  Monólito web <strong>server-side</strong>: cada usuário organiza um
+                  <strong>drive</strong> de pastas e notas em Markdown, gerencia um
+                  <strong>Kanban</strong> pessoal e troca mensagens com outros autores (inclusive
+                  transferência de tarefas). O que for público fica em
+                  <code class="inline-code">/@username/…</code> para leitura sem cadastro — ideal para blogs,
+                  docs e bibliotecas partilháveis.
+                </p>
 
-            <h3>Como experimentar (resumo)</h3>
-            <p style="margin: 0; color: var(--text-muted); font-size: 0.92rem">
-              Clonar o repositório, <code class="inline-code">composer install</code> e
-              <code class="inline-code">npm install</code>, copiar <code class="inline-code">.env.example</code>,
-              gerar chave, configurar <code class="inline-code">APP_URL</code> (ex. porta 5077),
-              <code class="inline-code">APP_LOCALE</code> e SQLite, rodar migrações,
-              <code class="inline-code">npm run build</code> (ou <code class="inline-code">npm run dev</code> para
-              HMR) e <code class="inline-code">php artisan serve --port=5077</code>. Há variante
-              <strong>Docker</strong> (<code class="inline-code">docker compose up -d</code>) com Nginx na porta
-              5077. Documentação de rotas, modelos e fluxos: arquivo
-              <a
-                href="https://github.com/Ig0r-Rosa/Archivus/blob/master/ARCHIVUS.md"
-                rel="noopener noreferrer"
-                >ARCHIVUS.md</a
-              >
-              no repositório.
-            </p>
+                <p class="archivus-meta">
+                  Projeto código aberto (<strong>MIT</strong>),
+                  <a href="https://github.com/Ig0r-Rosa/Archivus/blob/master/ARCHIVUS.md" rel="noopener noreferrer"
+                    >ARCHIVUS.md</a
+                  >
+                  descreve rotas, models e fluxos completos.
+                </p>
 
-            <h3>Qualidade e próximos passos</h3>
-            <p style="margin: 0; color: var(--text-muted); font-size: 0.92rem">
-              A base inclui suíte de testes com <strong>PHPUnit</strong> (centenas de casos), formatação
-              com <strong>Pint</strong> e logs de desenvolvimento com <strong>Pail</strong>. No roadmap próximo:
-              histórico de versões de documentos, comentários públicos, API REST e experiências offline.
-            </p>
+                <p class="archivus-stack-heading" id="archivus-stack-label">Backend &amp; runtime</p>
+                <div class="chip-wrap archivus-chips" aria-labelledby="archivus-stack-label">
+                  <span class="chip accent">PHP 8.3</span>
+                  <span class="chip accent">Laravel 13</span>
+                  <span class="chip">Blade</span>
+                  <span class="chip">SQLite</span>
+                  <span class="chip">PHPUnit</span>
+                  <span class="chip">Laravel Breeze</span>
+                  <span class="chip">Docker</span>
+                </div>
 
-            <div class="hero-cta" style="margin-top: 1.25rem">
-              <a
-                class="btn btn-primary"
-                href="https://github.com/Ig0r-Rosa/Archivus"
-                rel="noopener noreferrer"
-                >Repositório no GitHub</a
-              >
-              <a
-                class="btn btn-ghost"
-                href="https://github.com/Ig0r-Rosa/Archivus/blob/master/README.md"
-                rel="noopener noreferrer"
-                >README</a
-              >
-              <a
-                class="btn btn-ghost"
-                href="https://github.com/Ig0r-Rosa/Archivus/blob/master/ARCHIVUS.md"
-                rel="noopener noreferrer"
-                >ARCHIVUS.md (referência técnica)</a
-              >
+                <p class="archivus-stack-heading" id="archivus-fe-label">Front-end &amp; assets</p>
+                <div class="chip-wrap archivus-chips" aria-labelledby="archivus-fe-label">
+                  <span class="chip accent">JavaScript</span>
+                  <span class="chip">Vite 8</span>
+                  <span class="chip">Tailwind CSS 3</span>
+                  <span class="chip">Alpine.js 3</span>
+                  <span class="chip">axios</span>
+                  <span class="chip">KaTeX</span>
+                  <span class="chip">highlight.js</span>
+                </div>
+
+                <div class="hero-cta archivus-actions">
+                  <a
+                    class="btn btn-primary"
+                    href="https://github.com/Ig0r-Rosa/Archivus"
+                    rel="noopener noreferrer"
+                    >Repositório no GitHub</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://github.com/Ig0r-Rosa/Archivus/blob/master/README.md"
+                    rel="noopener noreferrer"
+                    >README</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://github.com/Ig0r-Rosa/Archivus/blob/master/ARCHIVUS.md"
+                    rel="noopener noreferrer"
+                    >ARCHIVUS.md</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>

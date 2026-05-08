@@ -377,38 +377,101 @@ section {
 }
 
 /**
- * Projeto Archivus — secção longa sob “Repositórios” (sem link no header): listas e h3 compactos.
+ * Links de texto dentro do spotlight Archivus (não herdam estilo dos `.btn`).
  */
-.archivus-detail-block h3 {
-  font-size: 1rem;
-  margin: 1.5rem 0 0.5rem;
-  color: var(--text);
-  font-weight: 600;
-}
-
-.archivus-detail-block h3:first-of-type {
-  margin-top: 1.25rem;
-}
-
-.archivus-detail-block ul {
-  margin: 0 0 0.75rem;
-  padding-left: 1.15rem;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-}
-
-.archivus-detail-block li + li {
-  margin-top: 0.45rem;
-}
-
-.archivus-detail-block a {
+.archivus-detail-block a:not(.btn) {
   color: var(--accent);
   text-decoration: none;
 }
 
-.archivus-detail-block a:hover,
-.archivus-detail-block a:focus-visible {
+.archivus-detail-block a:not(.btn):hover,
+.archivus-detail-block a:not(.btn):focus-visible {
   text-decoration: underline;
+}
+
+/**
+ * Botão primário dentro do Archivus: reforça texto escuro (evita conflito com regra dos links).
+ */
+.archivus-detail-block .btn-primary {
+  color: var(--bg-deep);
+}
+
+.archivus-detail-block .btn-primary:hover,
+.archivus-detail-block .btn-primary:focus-visible {
+  color: var(--bg-deep);
+}
+
+/**
+ * Spotlight Archivus: imagem grande + texto (stack técnico) em grelha responsiva.
+ */
+.archivus-spotlight {
+  display: grid;
+  gap: 1.65rem;
+  align-items: start;
+}
+
+.archivus-spotlight__figure {
+  margin: 0;
+}
+
+.archivus-spotlight__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+.archivus-spotlight__caption {
+  margin: 0.55rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.archivus-lead {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.58;
+  color: var(--text-muted);
+}
+
+.archivus-meta {
+  margin: 0.85rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/**
+ * Separadores tipo “rótulo de secção” para grupos de chips (mono, mesmo vocabulário do site).
+ */
+.archivus-stack-heading {
+  margin: 1.1rem 0 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+
+.archivus-chips {
+  margin-bottom: 0;
+}
+
+.archivus-actions {
+  margin-top: 1.35rem;
+}
+
+@media (min-width: 920px) {
+  .archivus-spotlight {
+    grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
+    gap: 1.85rem;
+  }
 }
 
 .project-deep-dive {
