@@ -387,6 +387,14 @@
             >
             <span class="lang">Shell · Hyprland · Python · CSS · QML</span>
           </a>
+          <a class="repo-card" href="https://github.com/Ig0r-Rosa/Xhat" rel="noopener noreferrer">
+            <span class="name">Xhat</span>
+            <span class="desc"
+              >Assistente de terminal com IA local (Ollama): português → comando Linux, TUI Textual e confirmação
+              antes de executar — 100% na sua máquina.</span
+            >
+            <span class="lang">Python · Textual · Ollama</span>
+          </a>
           <a class="repo-card" href="https://github.com/Ig0r-Rosa/BlockPlayer" rel="noopener noreferrer">
             <span class="name">BlockPlayer</span>
             <span class="desc"
@@ -618,6 +626,98 @@
                     href="https://github.com/Ig0r-Rosa/MeuHypr/blob/main/install.sh"
                     rel="noopener noreferrer"
                     >install.sh</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Xhat: mesmo padrão visual do Archivus / MeuHypr -->
+      <section class="project-deep-dive" id="projeto-xhat" aria-labelledby="titulo-xhat">
+        <div class="section-head">
+          <h2 id="titulo-xhat">Xhat</h2>
+          <span class="comment">// TUI · Ollama · português → Linux · humano no loop</span>
+        </div>
+        <div class="panel">
+          <div class="panel-bar" aria-hidden="true">
+            <span class="dots"><span></span><span></span><span></span></span>
+            <span>~/repos/Xhat — spotlight</span>
+          </div>
+          <div class="panel-body archivus-detail-block">
+            <div class="archivus-spotlight">
+              <figure class="archivus-spotlight__figure">
+                <img
+                  src="Assets/XhatInterface.png"
+                  width="960"
+                  height="1047"
+                  alt="Captura do Xhat: chat TUI no terminal, pedido em português, comando Linux sugerido e confirmação antes de executar."
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="archivus-spotlight__caption">
+                  Interface real do <strong>Xhat</strong> — linguagem natural, sugestão de comando e confirmação
+                  (Aplicar / Editar / Cancelar) no diretório atual.
+                </figcaption>
+              </figure>
+
+              <div class="archivus-spotlight__text">
+                <p class="archivus-lead">
+                  Assistente de <strong>terminal com IA local</strong>: você fala em
+                  <strong>português</strong>, o modelo sugere o comando Linux e
+                  <strong>só executa com a sua aprovação</strong>. Tudo roda na máquina via
+                  <strong>Ollama</strong> — sem enviar prompts para a nuvem. Há TUI interativa e modo
+                  single-shot (<code class="inline-code">--yes</code> /
+                  <code class="inline-code">--dry-run</code>) para scripts.
+                </p>
+
+                <p class="archivus-meta">
+                  Código aberto no GitHub; <code class="inline-code">instala.sh</code> prepara Python, comando
+                  <code class="inline-code">Xhat</code> e modelos. Visão de produto em
+                  <a href="https://github.com/Ig0r-Rosa/Xhat/blob/main/IDEIA.md" rel="noopener noreferrer"
+                    >IDEIA.md</a
+                  >.
+                </p>
+
+                <p class="archivus-stack-heading" id="xhat-runtime-label">Runtime &amp; IA</p>
+                <div class="chip-wrap archivus-chips" aria-labelledby="xhat-runtime-label">
+                  <span class="chip accent">Python 3.10+</span>
+                  <span class="chip accent">Textual (TUI)</span>
+                  <span class="chip accent">Ollama</span>
+                  <span class="chip">Qwen 3.5 4B</span>
+                  <span class="chip">Qwen 2.5 Coder 7B</span>
+                  <span class="chip">DuckDuckGo</span>
+                </div>
+
+                <p class="archivus-stack-heading" id="xhat-arch-label">Arquitetura &amp; segurança</p>
+                <div class="chip-wrap archivus-chips" aria-labelledby="xhat-arch-label">
+                  <span class="chip accent">Humano no loop</span>
+                  <span class="chip">brain / llm / memory</span>
+                  <span class="chip">executor</span>
+                  <span class="chip">~/.xhat/*.md</span>
+                  <span class="chip">keep_alive=0</span>
+                  <span class="chip">CLI + TUI</span>
+                </div>
+
+                <div class="hero-cta archivus-actions">
+                  <a
+                    class="btn btn-primary"
+                    href="https://github.com/Ig0r-Rosa/Xhat"
+                    rel="noopener noreferrer"
+                    >Repositório no GitHub</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://github.com/Ig0r-Rosa/Xhat/blob/main/README.md"
+                    rel="noopener noreferrer"
+                    >README</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://github.com/Ig0r-Rosa/Xhat/blob/main/instala.sh"
+                    rel="noopener noreferrer"
+                    >instala.sh</a
                   >
                 </div>
               </div>
